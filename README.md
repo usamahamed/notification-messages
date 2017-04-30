@@ -17,6 +17,7 @@ Angular.js module providing notifications used to display information which give
 - run grunt on terminal it will listen on port 9000
 - on browser go to this link http://localhost:9000/source/index.html
 - to see docs go to this link http://localhost:9000/docs/index.html#/api/notification-messages
+- to see simple design sketch http://localhost:9000/design/index.html
 # Test 
  i use protractor and to see test it's necessary to run the app server and the server with json-data on one terminal and 
  other terminal start server with json data :
