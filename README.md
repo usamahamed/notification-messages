@@ -20,7 +20,7 @@ Angular.js module providing notifications used to display information which give
 # Test 
  i use protractor and to see test it's necessary to run the app server and the server with json-data on one terminal and 
  other terminal start server with json data :
- ```bash
-cd test/
+ ```
+ cd test/
 json-server --watch db-json
 ```
