@@ -22,5 +22,4 @@ Angular.js module providing notifications used to display information which give
  other terminal start server with json data :
 ```bash
 cd test/
-json-
-
+json-server --watch db-json
