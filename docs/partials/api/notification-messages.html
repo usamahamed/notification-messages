@@ -1,0 +1,46 @@
+<a href="https://github.com/usamahamed/notification-messages/blob/master/source/scripts/notification-messages.js" class="improve-docs"><i class="icon-edit"> </i>Improve this doc</a><a href="https://github.com/usamahamed/notification-messages/blob/master/source/scripts/notification-messages.js" class="view-source"><i class="icon-eye-open"> </i>View source</a><h1><code ng:non-bindable="">notification-messages</code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="notification-service-page"><p>Angular.js module providing notifications used to display information which give the user a feedback and having following features:</p>
+<h3 id="description_features">Features</h3>
+<ul>
+<li>it displays notifications as overlay in front of the page;</li>
+<li>they have different appearance depending on a category;</li>
+<li>support three different notification categories: "info", "warning" and "error";</li>
+<li>max 5(changeable number) notifications are displayed at the same time by dafault;</li>
+<li>If the max amount of notifications is reached, the notification module combine the oldest notification into one group, thus the max amount is satisfied again.</li>
+<li>the notifications have a title and a body;</li>
+<li>created notifications are closable;</li>
+<li>closed automatically after 90 seconds(changeable number) by default;</li>
+<li>the service is able to display notifications with confirmations;</li>
+<li>the service can read data from backend side and can send data to it.</li>
+</ul>
+<h3 id="description_install">Install</h3>
+<ul>
+<li>inject the notification-messages to your app module:<pre><code class="lang-javascript">var app = angular.module(&#39;myApp&#39;, [&#39;notification-messages&#39;]);
+...
+</code></pre>
+</li>
+<li>inject its service called &#39;Notification&#39; to the app controller:<pre><code class="lang-javascript">...
+app.controller(&#39;AppController&#39;, [&#39;$scope&#39;, &#39;Notification&#39;, function($scope, Notification){...}]);
+</code></pre>
+</li>
+<li>You need also to download notification-messages.js and notification-messages-styles.css from the source folder:<pre><code class="lang-html">...
+&lt;link rel=&quot;stylesheet&quot; href=&quot;styles/notification-messages-styles.css&quot;&gt;
+...
+&lt;script src=&quot;scripts/notification-messages.js&quot;&gt;&lt;/script&gt;
+...
+</code></pre>
+</li>
+<li>The notification-messages can read data from server and send user responds to it. In order to use this feature, you need to set baseUrl for your server interface. :<pre><code class="lang-javascript">...
+Notification.setOptions({baseUrl: &#39;http://myserver.com/api/notifications/&#39;})
+...
+</code></pre>
+! notifications will be fetched using interface: baseUrl + &#39;/list&#39;;<br />
+! user responds will be sent using interface: baseUrl + &#39;/confirm&#39;.<h3 id="description_usage">Usage</h3>
+The module contains the service named Notification having 3 public methods. You can call them in your app controller in order to get corresponding effect. Please refer to the Notification service section for details.</li>
+</ul>
+</div></div>
+</div>
