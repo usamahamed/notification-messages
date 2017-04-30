@@ -1,0 +1,77 @@
+{
+  "list": [
+    {
+      "id": 100,
+      "from": "userManagement",
+      "category": "info",
+      "type": "note",
+      "header": "Lorem ipsum dolor.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, quae."
+    },
+    {
+      "id": 101,
+      "from": "userManagement",
+      "category": "warning",
+      "type": "ok_confirm",
+      "header": "Lorem ipsum dolor sit.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorem, maiores."
+    },
+    {
+      "id": 102,
+      "from": "userManagement",
+      "category": "error",
+      "type": "ok_cancel_confirm",
+      "header": "Lorem ipsum dolor sit.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorem, maiores."
+    },
+    {
+      "id": 103,
+      "from": "userManagement",
+      "category": "info",
+      "type": "ok_confirm",
+      "header": "Lorem ipsum.",
+      "content": "Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 104,
+      "from": "userManagement",
+      "category": "warning",
+      "type": "ok_cance_confirm",
+      "header": "Lorem ipsum dolor sit.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorem, maiores."
+    },
+    {
+      "id": 105,
+      "from": "userManagement",
+      "category": "error",
+      "type": "info",
+      "header": "Lorem ipsum dolor sit.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ad harum architecto? Accusantium!"
+    },
+    {
+      "id": 106,
+      "from": "userManagement",
+      "category": "warning",
+      "type": "info",
+      "header": "Lorem ipsum dolor sit.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, sint."
+    }
+  ],
+  "confirm": [
+    {
+      "id": 16,
+      "from": "userManagement",
+      "result": 1
+    },
+    {
+      "id": 15,
+      "from": "userManagement",
+      "result": 1
+    },
+    {
+      "id": 13,
+      "from": "userManagement",
+      "result": 1
+    }
+  ]
+}

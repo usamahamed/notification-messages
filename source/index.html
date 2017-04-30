@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "Demo">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Notification messages Demo</title>
+	<!-- build:css styles/main.css -->
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="styles/notification-messages-styles.css">
+	<!-- endbuild -->
+</head>
+<body ng-controller = 'DemoController'>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Notification messages Demo</a>
+		</div>
+	</nav>
+	<!-- Form -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<form class="form-horizontal" role="form" name="simulationForm" id="simulationForm" ng-submit="createNote()">
+					<div class="form-group" style="text-align:center">
+						<legend style="center">Use the Form to Simulate the Notification messages</legend>
+					</div>
+					<div class="form-group">
+						<label for="noteTitle" class="col-md-2 control-label">Title</label>
+						<div class="col-md-10">
+							<input type="text" 
+							class="form-control" 
+							id="noteTitle" 
+							name="noteTitle" 
+							placeholder="Enter the title of your notification" 
+							ng-model="note.header" 
+							required/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="noteBody" class="col-md-2 control-label">Body</label>
+						<div class="col-md-10">
+							<textarea class="form-control" 
+							rows="4" id="noteBody" 
+							name="noteBody" 
+							placeholder="Enter the body of your notification" 
+							ng-model="note.content" 
+							required></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="radio-inline" class="col-md-2 control-label">Category</label>
+						<div class="col-md-10">
+							<label class="radio-inline">
+								<input type="radio" 
+								name="noteCategory" 
+								id="noteCategory" 
+								value="info" 
+								ng-model="note.category" 
+								required> Info
+							</label>
+							<label class="radio-inline">
+								<input type="radio" 
+								name="noteCategory" 
+								id="noteCategory" 
+								value="warning"
+								ng-model="note.category" 
+								required> Warning
+							</label>
+							<label class="radio-inline">
+								<input type="radio" 
+								name="noteCategory" 
+								id="noteCategory" 
+								value="error"
+								ng-model="note.category" 
+								required> Error
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="radio-inline" class="col-md-2 control-label">Type</label>
+						<div class="col-md-10">
+							<label class="radio-inline">
+								<input type="radio"
+								name="noteType"
+								id="noteType"
+								value="note"
+								ng-model="note.type"
+								required> Note
+							</label>
+							<label class="radio-inline">
+								<input type="radio"
+								name="noteType"
+								id="noteType"
+								value="ok_confirm"
+								ng-model="note.type"
+								required> Ok confirm
+							</label>
+							<label class="radio-inline">
+								<input type="radio"
+								name="noteType"
+								id="noteType"
+								value="ok_cancel_confirm"
+								ng-model="note.type"
+								required> Ok cancel confirm
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-10 col-md-offset-2">
+							<button type="submit" 
+							class="btn btn-primary" 
+							id="simulateButton"
+							>Simulate</button>
+							<a id="useMockup"class="btn btn-default" ng-click="useMockup()">
+								Fill with mock data
+							</a>
+							<a id="showModal" class="btn btn-default"
+							data-toggle="modal" data-target="#myModal">
+							Fetch from server
+							</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">How to Simulate Fetching from Server</h4>
+				</div>
+				<div class="modal-body">
+					<ul> Steps
+						<li>First of all, be sure you have nodejs and npm installed on your computer.</li>
+						<li>Then using your terminal please install json-server globally: <pre>sudo npm install json-server -g</pre></li>
+						<li>After that go to the json-data subfolder (assuming you're in the demo folder):<pre>cd json-data</pre></li>
+						<li>Run the json-server using following command: <pre>json-server --watch db.json</pre></li>
+						<li>Now you can click on the bellow button to simulate fetching notifications from the server:<br /> <a id="getFromServer" class="btn btn-default" ng-click="get()">Fetch now!</a>
+						</li>
+						<li>After simulation you can terminate the json-server by pressing CTRL+C in the termial window where you ran the server.</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- build:js scripts/main.js -->
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="scripts/demo.js"></script>
+	<script src="scripts/notification-messages.js"></script>
+	<!-- endbuild -->
+</body>
+</html>
