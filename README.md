@@ -30,7 +30,9 @@ http://localhost:9000/source/index.html
 http://localhost:9000/docs/index.html#/api/notification-messages
 ```
 - to see simple design sketch 
-```http://localhost:9000/design/index.html```
+```
+http://localhost:9000/design/index.html
+```
 # Test 
  i use protractor and to see test it's necessary to run the app server and the server with json-data on one terminal and 
  other terminal start server with json data :
